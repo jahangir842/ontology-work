@@ -89,7 +89,18 @@ In the **Data properties** tab, add:
 | `employeeId` | `Employee` | `xsd:string` | `E001` |
 | `fullName` | `Employee` | `xsd:string` | `Ayesha Khan` |
 
-Select a property and use its description panel to add the domain and range. [Object property](https://protegeproject.github.io/protege/views/object-property-description/) and [data property](https://protegeproject.github.io/protege/views/data-property-hierarchy/) documentation can help you find the views.
+**How to enter these in Protégé:**
+
+1. Open **Object properties**. In the hierarchy, select `owl:topObjectProperty`, click the **add subproperty (+)** button, and name the new property `worksIn`.
+2. Select `worksIn`. In the description panel, click **+** beside **Domains (intersection)** and select `Employee`. Click **+** beside **Ranges (intersection)** and select `Department`.
+3. Repeat for `reportsTo`, with domain `Employee` and range `Manager`.
+4. Open **Data properties**. Select `owl:topDataProperty`, use **add subproperty (+)** to create `employeeId` and `fullName`, and select each property in turn. In its description panel set domain `Employee` and range `xsd:string`.
+
+For the data properties specifically, create `employeeId` and `fullName` as two **siblings directly under** `owl:topDataProperty`. Select each one and use **+** beside **Domains (intersection)** to add `Employee`, then **+** beside **Ranges (intersection)** to add `xsd:string`. If the description panel is missing, choose **Window → Views → Data property views → Description** and place it on the tab. The range here is a datatype (`xsd:string`), not another class. `E001` and `Ayesha Khan` are example values; add those later to individuals, not in the property definition.
+
+**If you cannot see Domain or Range:** Select `worksIn` under **Object properties**, then choose **Window → Views → Object property views → Description**. Protégé lets you place this view on the current tab; look in it for **Domains (intersection)** and **Ranges (intersection)**. These fields are in the property's **Description** view, not in the class hierarchy or the property hierarchy. Expand or resize the panel if its lower sections are hidden.
+
+You are defining each property for the ontology here. You do **not** type `E001` or choose `HRDepartment` in these property descriptions. Those are values of particular individuals, entered in the next section. See Protégé's [object property description](https://protegeproject.github.io/protege/views/object-property-description/) and [data property hierarchy](https://protegeproject.github.io/protege/views/data-property-hierarchy/) documentation.
 
 **Think:** Domain and range are logical statements, not form-field restrictions. If you assert `Bilal reportsTo Ayesha`, the `reportsTo` range lets a reasoner infer that `Ayesha` is a `Manager`. Add a range only when that inference is always true in your intended HR system. For example, change the range to `Employee` if workers can report to someone who is not a manager in your model.
 
@@ -112,6 +123,10 @@ Bilal reportsTo Ayesha
 ```
 
 To create an individual, select its class and use **Add Individual**. Then select the individual to add its property values. See Protégé's [individuals guide](https://protegeproject.github.io/protege/views/instances/).
+
+For example, select `Bilal` in the **Individuals** tab. In **Object property assertions**, click **+**, choose `worksIn`, then choose `HRDepartment`. Add another assertion, `reportsTo` → `Ayesha`. In **Data property assertions**, click **+**, choose `employeeId`, enter `E002`, and select the string datatype if asked. Use the same approach for the other values in the table. If an assertions panel is hidden, look under **Window → Views → Individual views** to add it.
+
+**If Protégé says “Invalid property name”:** The assertion dialog has a property field and a value field. In the property field, select the existing data property `employeeId` (use autocomplete, often `Ctrl+Space`, if offered). Enter `E001` in the value field for `Ayesha`; do not type `employeeId → E001` or `Ayesha employeeId` into one field. If `employeeId` is not offered, check the **Data properties** hierarchy for its exact spelling and confirm it was created there rather than under **Object properties**. Then return to the individual and try again.
 
 **Think:** `Bilal` is a person in your example data. `Employee` is the reusable type. If you remove Bilal later, the concept of employee remains.
 
