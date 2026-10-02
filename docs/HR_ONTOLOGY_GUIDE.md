@@ -2,6 +2,14 @@
 
 This is a learning exercise. You will do the editing in Protégé and save your own `.owl` file. Use fictional employees and departments; do not enter real personnel data.
 
+## Install Protege Desktop on Ubuntu
+
+1. Visit the [official Protégé Desktop download page](https://protege.stanford.edu/software/#desktop-protege). For Ubuntu, get the **Linux `.tar.gz` archive** from the [official release page](https://github.com/protegeproject/protege-distribution/releases/latest) if the software page shows only the platform-independent ZIP.
+2. Open **Downloads** in Ubuntu's Files app, right-click the downloaded `.tar.gz` file, and choose **Extract Here**. Move the extracted `Protege` folder wherever you want to keep the application.
+3. Open the extracted folder and double-click the `protege` launcher. If Ubuntu asks, choose **Run**. Alternatively, open a terminal in that folder and enter `./protege`.
+
+The Linux archive includes Java, so you do not need to install Java separately. The platform-independent ZIP is a different download and requires Java. See the [official Linux installation instructions](https://protegeproject.github.io/protege/installation/linux/) if your downloaded archive looks different.
+
 ## 1. Decide what the ontology must answer
 
 An ontology is a description of concepts and their relationships. Before opening the editor, write down a few questions you want it to answer. These are often called **competency questions**.

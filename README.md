@@ -4,6 +4,8 @@ This repository is a workspace for **you to build an HR ontology in Protégé**.
 
 Start with [the hands-on guide](docs/HR_ONTOLOGY_GUIDE.md). It explains what to model, why each choice matters, how to enter it in Protégé, and how to check your result.
 
+Download Protégé Desktop from the [official Protégé software page](https://protege.stanford.edu/software/#desktop-protege). The guide includes [short Ubuntu setup steps](docs/HR_ONTOLOGY_GUIDE.md#install-protege-desktop-on-ubuntu).
+
 ## Which route should I take?
 
 1. **Recommended:** Open Protégé's example Pizza ontology for 10–15 minutes to see what classes, properties, and individuals look like. Then create your own small HR ontology from a blank file. The example is for learning the interface; your HR model is the actual project.
