@@ -4,7 +4,7 @@ This repository is a workspace for **you to build an HR ontology in Protégé**.
 
 Start with [the hands-on guide](docs/HR_ONTOLOGY_GUIDE.md). It explains what to model, why each choice matters, how to enter it in Protégé, and how to check your result.
 
-Download Protégé Desktop from the [official Protégé software page](https://protege.stanford.edu/software/#desktop-protege). The guide includes [short Ubuntu setup steps](docs/HR_ONTOLOGY_GUIDE.md#install-protege-desktop-on-ubuntu).
+Download Protégé Desktop from the [official Protégé software page](https://protege.stanford.edu/software/#desktop-protege). If you are using Ubuntu, follow the step-by-step [Protégé Ubuntu Installation Guide](docs/installation-protege.md) to set up desktop shortcuts and HiDPI display scaling.
 
 ## Which route should I take?
 
@@ -19,3 +19,4 @@ Your first deliverable can be a file you save yourself as `hr-ontology.owl`. Kee
 - [Protégé Desktop and WebProtégé](https://protege.stanford.edu/software/)
 - [Protégé Desktop getting started](https://protegeproject.github.io/protege/getting-started/)
 - [Protégé Desktop interface documentation](https://protegeproject.github.io/protege/)
+- [Protégé Ubuntu Installation Guide](docs/installation-protege.md)
